@@ -1,0 +1,1 @@
+defpsd = 'toor' # default password

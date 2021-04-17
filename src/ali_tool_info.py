@@ -1,0 +1,1 @@
+tools = {'git':'https://github.com/git/git','ls':'https://facebook.com/home.php/'}
