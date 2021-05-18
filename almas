@@ -1,40 +1,41 @@
 #! /usr/bin/python3
 
-#python interpreter.py script.al
+# almas script.al
 
 
-import os, getpass, sys
+import os
+import getpass
+import sys
 from lib.STD_lib import *
 from lib.root_lib import *
 from src.defpsd import *
 
 try:
-	intp = open(sys.argv[1], 'r').readlines()
-	nm = sys.argv[1]
-	nm = nm[-3:].strip()
-	if nm == '.al':
-		for lex in intp:
-			if lex == '\n':
-				lex = ''
-			elif lex == 'exit':
-				print('yy')
-				sys.exit()
-			STD_lib(lex)
-	else:
-		print('It is not almas script ! ')
+    intp = open(sys.argv[1], 'r').readlines()
+    nm = sys.argv[1]
+    nm = nm[-3:].strip()
+    if nm == '.al':
+        for lex in intp:
+            if lex == '\n':
+                lex = ''
+            elif lex == 'exit':
+                sys.exit()
+            STD_lib(lex)
+    else:
+        print('It is not almas script ! ')
 except:
-	pass
+    pass
 else:
-	exit()
+    sys.exit()
 
 if __name__ == "__main__":
-    print("Almas - Interpreter\n[\"Version 0.0.1\", \"including ali package manager.\"]\n[\"Where space doesn’t matters !\"]")
+    print(
+        "Almas - Interpreter\n[\"Version 0.0.1\", \"including ali package manager.\"]\n[\"Where space doesn’t matters !\"]")
     while True:
         if psd == '':
-        	prmt = '\n'+os.getcwd()+' @@ '+ getpass.getuser()+'\n>>> '
+            prmt = '\n'+os.getcwd()+' @@ ' + getpass.getuser()+'\n>>> '
         elif psd == defpsd:
-        	prmt = '\n'+os.getcwd()+' @@ '+'root'+'\n>>> '
+            prmt = '\n'+os.getcwd()+' @@ '+'root'+'\n>>> '
         pmt = input(prmt)
         pmt = pmt.strip()
         STD_lib(pmt)
-        

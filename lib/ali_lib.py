@@ -11,6 +11,7 @@ ali_help = '''
 Ali - Package Manager For Almas Interpreter
 
 update    - For updating source code and library.
+install   - For installing packages provided by third party.
 
 © Copyright collected by Md. Almas Ali '''
 
